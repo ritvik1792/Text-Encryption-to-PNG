@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, red, black);
+            color: white;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        .wrapper div{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Encrypted image:</h2>
+    <a href="{{url_for('static', filename='enc.png')}}" download="enc">
+        <img src="{{url_for('static', filename='enc.png')}}" alt="">
+    </a>
+    <div class="wrapper">
+        <div>
+            <h2>Private key:</h2><br>
+            <a href="{{url_for('static', filename='pk.png')}}" download="pk">
+                <img src="{{url_for('static', filename='pk.png')}}" alt="">
+            </a>
+        </div>
+        
+        <div>
+            <h2>Public key:</h2><br>
+            <a href="{{url_for('static', filename='pub.png')}}" download="pk">
+                <img src="{{url_for('static', filename='pub.png')}}" alt="">
+            </a>
+        </div>
+        
+    </div> 
+    
+    
+</body>
+</html>
